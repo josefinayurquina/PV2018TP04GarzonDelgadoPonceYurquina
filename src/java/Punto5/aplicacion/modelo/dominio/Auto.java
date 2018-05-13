@@ -6,7 +6,6 @@
 package Punto5.aplicacion.modelo.dominio;
 
 import java.io.Serializable;
-
 /**
  *
  * @author Florencia
