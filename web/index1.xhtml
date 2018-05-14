@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:h="http://xmlns.jcp.org/jsf/html"
+       xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <h:body >
+            <p:panel header="Esc Minas" footer="2018">
+            <h:form id="frmTemp" >
+                <p:panelGrid id="pnlTemp" columns="2">
+                    <p:outputLabel for="txtNumt" value="Ingrese el Numero:"/>
+                    <p:inputNumber id="txtNumt" value="#{temperaturaFormBean.numt}"/>
+                    <p:outputLabel for="txtTT" value="Ingrese Tipo de Escala (F,C,K)"/>
+                    <p:inputText id="txtTT" value="#{temperaturaFormBean.TT}" />
+                    <p:outputLabel for="txtTC" value="Ingrese Tipo de Escala a la que desea Convertir (F,C,K)"/>
+                    <p:inputText id="txtTC" value="#{temperaturaFormBean.TC}" />
+                    <p:commandButton id="btnConvC" value="Convertir" actionListener="#{temperaturaFormBean.convertir()}" update="dgConversor" />
+                  
+                    <p:outputLabel id="dgConversor" value="#{temperaturaFormBean.r}" />
+                </p:panelGrid>
+                    </h:form>
+        
+        </p:panel>
+        </h:body>
+    </h:head>
+    
+</html>
