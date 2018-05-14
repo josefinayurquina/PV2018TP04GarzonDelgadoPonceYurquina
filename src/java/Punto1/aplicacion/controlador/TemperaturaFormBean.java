@@ -37,43 +37,43 @@ public class TemperaturaFormBean implements Serializable{
     }
     public void convertir(){
         double res=0;
-       if (TT== 'C'){
-           if (getTC()== 'F'){
+       if (TT== 'C'||TT== 'c'){
+           if ((getTC()== 'F') ||( getTC()== 'f')){
                res=cT.CaF(numt);
            }
            else
-            if (getTC()=='K'){
+            if (getTC()=='K' || getTC()=='k'){
                 res=cT.CaK(numt);
             }
-           if (getTC() =='C'){
+           if (getTC() =='C' || getTC() =='c'){
                 res=numt;
             }
            
               
        }
-       if (TT== 'F'){
-           if (getTC() == 'C'){
+       if (TT== 'F' || TT== 'f'){
+           if (getTC() == 'C' || getTC() == 'c'){
                res=cT.FaC(numt);
            }
            else
-            if (getTC() =='K'){
+            if (getTC() =='K' ||getTC() =='k'){
                 res=cT.FaK(numt);
             }
-            if (getTC() =='F'){
+            if (getTC() =='F'|| getTC() =='f'){
                 res=numt;
             }
         
                 
        }
-       if (TT== 'K'){
-           if (getTC() == 'F'){
+       if (TT== 'K'||TT== 'k'){
+           if (getTC() == 'F'||getTC() =='f'){
               res= cT.KaF(numt);
            }
            else
-            if (getTC() =='C'){
+            if (getTC() =='C' ||getTC() =='c'){
               res=  cT.KaC(numt);
             }
-        if (getTC() =='K'){
+        if (getTC() =='K'|| getTC() =='k'){
                 res=numt;
             }
        }
